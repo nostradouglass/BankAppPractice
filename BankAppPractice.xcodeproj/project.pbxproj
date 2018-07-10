@@ -15,6 +15,7 @@
 		AC101E5220F4578100B1580A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5120F4578100B1580A /* TabViewController.swift */; };
 		AC101E5420F4586C00B1580A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5320F4586C00B1580A /* MainViewController.swift */; };
 		AC101E5620F461EB00B1580A /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5520F461EB00B1580A /* AccountsViewController.swift */; };
+		AC6C3E3220F51CB9000DBAFB /* AccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */; };
 		B8326FE85D54A09FDA4AADEF /* Pods_BankAppPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D697C2FA0B0D4899C02B748 /* Pods_BankAppPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		AC101E5120F4578100B1580A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		AC101E5320F4586C00B1580A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC101E5520F461EB00B1580A /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				AC101E5320F4586C00B1580A /* MainViewController.swift */,
 				AC101E5120F4578100B1580A /* TabViewController.swift */,
 				AC101E5520F461EB00B1580A /* AccountsViewController.swift */,
+				AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */,
 			);
 			path = BankAppPractice;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				AC101E5620F461EB00B1580A /* AccountsViewController.swift in Sources */,
 				AC101E4020F3F34300B1580A /* AppDelegate.swift in Sources */,
 				AC101E5420F4586C00B1580A /* MainViewController.swift in Sources */,
+				AC6C3E3220F51CB9000DBAFB /* AccountsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
