@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="BankAppPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focusFederalCreditUnion" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-dr-6A1">
+                                <rect key="frame" x="67" y="20" width="280" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="2jK-3a-iQV"/>
+                                    <constraint firstAttribute="height" constant="138" id="Dsl-iG-VEd"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-AW-Ag1" userLabel="loginView">
+                                <rect key="frame" x="47" y="176" width="320" height="102"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Wf-zX-keV" userLabel="userView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZzA-47-eIg">
+                                                <rect key="frame" x="71" y="8" width="179" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginPerson" translatesAutoresizingMaskIntoConstraints="NO" id="cRC-su-mDq">
+                                                <rect key="frame" x="43" y="3" width="17" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9b-Qg-WeS" userLabel="passView">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QFp-xV-8Ak">
+                                                <rect key="frame" x="32" y="10" width="38" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgn-ak-PPE">
+                                                <rect key="frame" x="71" y="5" width="179" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="kc3-sb-KYx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nST-yQ-tWB">
+                                <rect key="frame" x="0.0" y="644" width="414" height="43"/>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="x9Z-Wm-IKr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Enroll">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzG-sf-wMR">
+                                <rect key="frame" x="132" y="286" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.74901960784313726" green="0.086274509803921567" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X6b-Vl-A4S"/>
+                                    <constraint firstAttribute="width" constant="150" id="lg5-W5-Mzg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="u7O-Sy-h6i" kind="show" id="pdk-9X-pF6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UzG-sf-wMR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Wb-82-46g"/>
+                            <constraint firstItem="cFe-dr-6A1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0yj-MV-yMs"/>
+                            <constraint firstItem="nST-yQ-tWB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2eC-kI-eBd"/>
+                            <constraint firstItem="UzG-sf-wMR" firstAttribute="top" secondItem="zn0-AW-Ag1" secondAttribute="bottom" constant="8" symbolic="YES" id="6Ug-lc-ji4"/>
+                            <constraint firstItem="UzG-sf-wMR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="286" id="Aq4-zR-zQq"/>
+                            <constraint firstItem="nST-yQ-tWB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="E3G-sD-kuU"/>
+                            <constraint firstItem="zn0-AW-Ag1" firstAttribute="top" secondItem="cFe-dr-6A1" secondAttribute="bottom" constant="18" id="W40-ha-uro"/>
+                            <constraint firstItem="UzG-sf-wMR" firstAttribute="top" secondItem="zn0-AW-Ag1" secondAttribute="bottom" constant="8" id="qhk-7R-iNf"/>
+                            <constraint firstItem="zn0-AW-Ag1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qjU-ki-Bhh"/>
+                            <constraint firstItem="nST-yQ-tWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tWr-QI-UwE"/>
+                            <constraint firstItem="cFe-dr-6A1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v4Y-CW-Kk5"/>
+                            <constraint firstItem="UzG-sf-wMR" firstAttribute="top" secondItem="zn0-AW-Ag1" secondAttribute="bottom" constant="8" id="zfn-FX-oEc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="-16.304347826086957"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="MYy-og-dhZ">
+            <objects>
+                <viewController id="u7O-Sy-h6i" customClass="MainViewController" customModule="BankAppPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hx8-0b-p85">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87X-ns-3bh">
+                                <rect key="frame" x="0.0" y="693" width="414" height="43"/>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="9iR-X2-oHy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focusFederalCreditUnion" translatesAutoresizingMaskIntoConstraints="NO" id="rbb-x8-GwG">
+                                <rect key="frame" x="67" y="20" width="280" height="138"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dOd-56-5z2">
+                                <rect key="frame" x="19" y="175" width="377" height="242"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8C-RU-Xcb">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="53"/>
+                                        <color key="backgroundColor" red="0.77647058820000003" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="9Zg-TL-DI5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Accounts">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="accountPressed:" destination="u7O-Sy-h6i" eventType="touchUpInside" id="DoL-II-NYp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4p-ug-qnG">
+                                        <rect key="frame" x="0.0" y="63" width="377" height="53"/>
+                                        <color key="backgroundColor" red="0.77647058820000003" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="trv-6l-Z5w"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Remote Deposit">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="depositPressed:" destination="u7O-Sy-h6i" eventType="touchUpInside" id="0ky-hl-snX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKM-Xt-0KV">
+                                        <rect key="frame" x="0.0" y="126" width="377" height="53"/>
+                                        <color key="backgroundColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="Pbw-c9-0Qa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Transfer">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="transferPressed:" destination="u7O-Sy-h6i" eventType="touchUpInside" id="mNU-A7-teO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-V6-agc">
+                                        <rect key="frame" x="0.0" y="189" width="377" height="53"/>
+                                        <color key="backgroundColor" red="0.77647058820000003" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="lVi-DS-dnn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Pay Bills">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="payBillPressed:" destination="u7O-Sy-h6i" eventType="touchUpInside" id="LUx-om-xbD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rbb-x8-GwG" firstAttribute="centerX" secondItem="Hx8-0b-p85" secondAttribute="centerX" id="AdG-1y-gUQ"/>
+                            <constraint firstItem="rbb-x8-GwG" firstAttribute="top" secondItem="LK0-eL-Ko4" secondAttribute="top" id="CJd-i5-eGj"/>
+                            <constraint firstItem="87X-ns-3bh" firstAttribute="trailing" secondItem="LK0-eL-Ko4" secondAttribute="trailing" id="CNJ-qz-iWn"/>
+                            <constraint firstItem="87X-ns-3bh" firstAttribute="leading" secondItem="LK0-eL-Ko4" secondAttribute="leading" id="CgN-2w-lt6"/>
+                            <constraint firstItem="dOd-56-5z2" firstAttribute="leading" secondItem="LK0-eL-Ko4" secondAttribute="leading" constant="19" id="Dla-hz-gmT"/>
+                            <constraint firstItem="87X-ns-3bh" firstAttribute="bottom" secondItem="LK0-eL-Ko4" secondAttribute="bottom" id="KQT-uS-iol"/>
+                            <constraint firstItem="dOd-56-5z2" firstAttribute="centerX" secondItem="rbb-x8-GwG" secondAttribute="centerX" id="Kvu-Ny-fed"/>
+                            <constraint firstItem="dOd-56-5z2" firstAttribute="top" secondItem="rbb-x8-GwG" secondAttribute="bottom" constant="17" id="d5U-ca-sEn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LK0-eL-Ko4"/>
+                    </view>
+                    <connections>
+                        <segue destination="5wv-Ko-LnZ" kind="show" identifier="accountSegue" id="wFL-qX-hoj"/>
+                        <segue destination="5wv-Ko-LnZ" kind="show" identifier="depositSegue" id="OUt-nH-x9m"/>
+                        <segue destination="5wv-Ko-LnZ" kind="show" identifier="transferSegue" id="QwF-hU-bPh"/>
+                        <segue destination="5wv-Ko-LnZ" kind="show" identifier="payBillsSegue" id="P8U-9Q-x8o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZjS-lV-FGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718" y="-575"/>
+        </scene>
+        <!--Remote Deposit-->
+        <scene sceneID="rgt-cO-TS1">
+            <objects>
+                <viewController id="fLy-e5-hcY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qSF-ku-GPG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-MT-XZ4">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Remote Deposit" id="GLw-Nx-6dd">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Li6-Xv-VpC">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="KBW-os-Fii"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="35j-eU-DRw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Remote Deposit" id="Sl6-t1-yDA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNk-dy-QPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3747.826086956522" y="982.33695652173924"/>
+        </scene>
+        <!--Transfer-->
+        <scene sceneID="ztu-e0-JF3">
+            <objects>
+                <viewController id="oCe-jK-U4E" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7b-bR-dV6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZE-u4-Fw3">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Transfer" id="DN4-sk-vDf">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="loC-am-1sS">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="oCw-IC-wnY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="scf-ZY-PSC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Transfer" id="nH1-GU-dmW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SY2-Au-0ta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4447.1999999999998" y="984.55772113943033"/>
+        </scene>
+        <!--Pay Bills-->
+        <scene sceneID="CVc-ww-Ycz">
+            <objects>
+                <viewController id="nLu-HN-me5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pJh-NC-J0k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dka-7c-vHD">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Pay Bills" id="VkC-Yz-iUW">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Chp-ge-mWX">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="dyj-h1-VFy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7ZO-6A-agh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pay Bills" id="uf4-Pn-oF8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSd-7b-uqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5146.3999999999996" y="991.75412293853083"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="23L-6F-ad1">
+            <objects>
+                <viewController id="Pd3-AW-AUh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ejy-Bp-32J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ID0-fu-318">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Ca-w3-xry"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="More" id="78G-Rz-ahI">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="BFD-UD-X74">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ID0-fu-318" firstAttribute="leading" secondItem="QVd-ws-6gL" secondAttribute="leading" id="MIy-bl-Y0r"/>
+                            <constraint firstItem="ID0-fu-318" firstAttribute="trailing" secondItem="QVd-ws-6gL" secondAttribute="trailing" id="REE-Tq-uF4"/>
+                            <constraint firstItem="ID0-fu-318" firstAttribute="top" secondItem="QVd-ws-6gL" secondAttribute="top" id="ugh-mn-AN4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QVd-ws-6gL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="OYL-MB-9rK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rE9-aW-Dxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5877" y="991"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="pN8-F4-fQ8">
+            <objects>
+                <viewController id="cmd-ah-ipT" customClass="AccountsViewController" customModule="BankAppPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwp-kX-DYR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-AS-UEb">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="APA-Sh-XEH"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Accounts" id="gJU-Pv-dX4">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Lil-SL-q4l">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="25D-YS-vTl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H1A-gA-TEA">
+                                <rect key="frame" x="0.0" y="114" width="414" height="491"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="y1w-mZ-cfL">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y1w-mZ-cfL" id="Vx6-bM-gA0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cmd-ah-ipT" id="837-Y8-f4Z"/>
+                                    <outlet property="delegate" destination="cmd-ah-ipT" id="Cv9-Ts-zRR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JtA-AS-UEb" firstAttribute="trailing" secondItem="5Ls-1c-bzP" secondAttribute="trailing" id="GZj-j6-A4S"/>
+                            <constraint firstItem="JtA-AS-UEb" firstAttribute="top" secondItem="5Ls-1c-bzP" secondAttribute="top" id="Wuu-Yc-6uz"/>
+                            <constraint firstItem="JtA-AS-UEb" firstAttribute="leading" secondItem="5Ls-1c-bzP" secondAttribute="leading" id="h9G-os-0RE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Ls-1c-bzP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Accounts" id="dqb-a2-gWQ"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsI-k6-QBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334.7826086956525" y="999.45652173913049"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="M8W-wx-0oH">
+            <objects>
+                <tabBarController id="5wv-Ko-LnZ" customClass="TabViewController" customModule="BankAppPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pd6-0n-VyV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cmd-ah-ipT" kind="relationship" relationship="viewControllers" id="LfR-Tq-V8u"/>
+                        <segue destination="fLy-e5-hcY" kind="relationship" relationship="viewControllers" id="xMD-b1-FXm"/>
+                        <segue destination="oCe-jK-U4E" kind="relationship" relationship="viewControllers" id="UB7-iq-D3h"/>
+                        <segue destination="nLu-HN-me5" kind="relationship" relationship="viewControllers" id="yW1-eI-fSt"/>
+                        <segue destination="Pd3-AW-AUh" kind="relationship" relationship="viewControllers" id="P6O-fs-kmF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWg-PB-C2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2543" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="focusFederalCreditUnion" width="280" height="138"/>
+        <image name="lockIcon" width="426" height="600"/>
+        <image name="loginPerson" width="554" height="600"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wFL-qX-hoj"/>
+        <segue reference="25D-YS-vTl"/>
+    </inferredMetricsTieBreakers>
+</document>
