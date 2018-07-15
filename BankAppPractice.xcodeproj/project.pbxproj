@@ -15,7 +15,13 @@
 		AC101E5220F4578100B1580A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5120F4578100B1580A /* TabViewController.swift */; };
 		AC101E5420F4586C00B1580A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5320F4586C00B1580A /* MainViewController.swift */; };
 		AC101E5620F461EB00B1580A /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5520F461EB00B1580A /* AccountsViewController.swift */; };
+		AC4F6B6E20FA825C00FC1C8F /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B6D20FA825C00FC1C8F /* Accounts.storyboard */; };
+		AC4F6B7020FA82AC00FC1C8F /* RemoteDeposit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B6F20FA82AC00FC1C8F /* RemoteDeposit.storyboard */; };
+		AC4F6B7220FA82DF00FC1C8F /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B7120FA82DF00FC1C8F /* Transfer.storyboard */; };
+		AC4F6B7420FA830100FC1C8F /* PayBills.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B7320FA830100FC1C8F /* PayBills.storyboard */; };
+		AC657FCA20FBF7B500921A53 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC657FC920FBF7B500921A53 /* DetailTableViewCell.swift */; };
 		AC6C3E3220F51CB9000DBAFB /* AccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */; };
+		ACCA7B2820FA86CC005F50F2 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA7B2720FA86CC005F50F2 /* AccountDetailsViewController.swift */; };
 		B8326FE85D54A09FDA4AADEF /* Pods_BankAppPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D697C2FA0B0D4899C02B748 /* Pods_BankAppPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +39,13 @@
 		AC101E5120F4578100B1580A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		AC101E5320F4586C00B1580A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC101E5520F461EB00B1580A /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		AC4F6B6D20FA825C00FC1C8F /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		AC4F6B6F20FA82AC00FC1C8F /* RemoteDeposit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemoteDeposit.storyboard; sourceTree = "<group>"; };
+		AC4F6B7120FA82DF00FC1C8F /* Transfer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
+		AC4F6B7320FA830100FC1C8F /* PayBills.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayBills.storyboard; sourceTree = "<group>"; };
+		AC657FC920FBF7B500921A53 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTableViewCell.swift; sourceTree = "<group>"; };
+		ACCA7B2720FA86CC005F50F2 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,18 +98,48 @@
 		AC101E3E20F3F34300B1580A /* BankAppPractice */ = {
 			isa = PBXGroup;
 			children = (
+				AC4F6B7520FA839700FC1C8F /* Storyboards */,
 				AC101E3F20F3F34300B1580A /* AppDelegate.swift */,
-				AC101E4320F3F34300B1580A /* Main.storyboard */,
-				AC101E4620F3F34400B1580A /* Assets.xcassets */,
+				AC657FC820FBF78C00921A53 /* Accounts */,
+				AC657FC720FBF77B00921A53 /* AccountDetails */,
 				AC101E4820F3F34400B1580A /* LaunchScreen.storyboard */,
+				AC101E4620F3F34400B1580A /* Assets.xcassets */,
 				AC101E4B20F3F34400B1580A /* Info.plist */,
 				AC101E4120F3F34300B1580A /* LoginViewController.swift */,
 				AC101E5320F4586C00B1580A /* MainViewController.swift */,
 				AC101E5120F4578100B1580A /* TabViewController.swift */,
+			);
+			path = BankAppPractice;
+			sourceTree = "<group>";
+		};
+		AC4F6B7520FA839700FC1C8F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AC101E4320F3F34300B1580A /* Main.storyboard */,
+				AC4F6B6D20FA825C00FC1C8F /* Accounts.storyboard */,
+				AC4F6B6F20FA82AC00FC1C8F /* RemoteDeposit.storyboard */,
+				AC4F6B7120FA82DF00FC1C8F /* Transfer.storyboard */,
+				AC4F6B7320FA830100FC1C8F /* PayBills.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AC657FC720FBF77B00921A53 /* AccountDetails */ = {
+			isa = PBXGroup;
+			children = (
+				ACCA7B2720FA86CC005F50F2 /* AccountDetailsViewController.swift */,
+				AC657FC920FBF7B500921A53 /* DetailTableViewCell.swift */,
+			);
+			path = AccountDetails;
+			sourceTree = "<group>";
+		};
+		AC657FC820FBF78C00921A53 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
 				AC101E5520F461EB00B1580A /* AccountsViewController.swift */,
 				AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */,
 			);
-			path = BankAppPractice;
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +176,7 @@
 				TargetAttributes = {
 					AC101E3B20F3F34300B1580A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -161,8 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC101E4A20F3F34400B1580A /* LaunchScreen.storyboard in Resources */,
+				AC4F6B7220FA82DF00FC1C8F /* Transfer.storyboard in Resources */,
 				AC101E4720F3F34400B1580A /* Assets.xcassets in Resources */,
+				AC4F6B6E20FA825C00FC1C8F /* Accounts.storyboard in Resources */,
 				AC101E4520F3F34300B1580A /* Main.storyboard in Resources */,
+				AC4F6B7020FA82AC00FC1C8F /* RemoteDeposit.storyboard in Resources */,
+				AC4F6B7420FA830100FC1C8F /* PayBills.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC101E5220F4578100B1580A /* TabViewController.swift in Sources */,
+				ACCA7B2820FA86CC005F50F2 /* AccountDetailsViewController.swift in Sources */,
+				AC657FCA20FBF7B500921A53 /* DetailTableViewCell.swift in Sources */,
 				AC101E4220F3F34300B1580A /* LoginViewController.swift in Sources */,
 				AC101E5620F461EB00B1580A /* AccountsViewController.swift in Sources */,
 				AC101E4020F3F34300B1580A /* AppDelegate.swift in Sources */,
@@ -377,7 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kdouglass.BankAppPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -396,7 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kdouglass.BankAppPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Uh-8F-Izm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pay Bills-->
+        <scene sceneID="VTl-LH-nZD">
+            <objects>
+                <viewController id="8Uh-8F-Izm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Il-An-Ls5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43D-4J-WhZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hci-yZ-JPz"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Pay Bills" id="YTr-uC-85b">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="JRz-9t-9eX">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="43D-4J-WhZ" firstAttribute="top" secondItem="Luy-2i-dCX" secondAttribute="top" id="4Tz-rY-jWG"/>
+                            <constraint firstItem="43D-4J-WhZ" firstAttribute="trailing" secondItem="Luy-2i-dCX" secondAttribute="trailing" id="IKz-m0-nln"/>
+                            <constraint firstItem="43D-4J-WhZ" firstAttribute="leading" secondItem="Luy-2i-dCX" secondAttribute="leading" id="UKM-hD-Yuk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Luy-2i-dCX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pay Bills" id="Ljz-fG-XoT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lJ-qa-rBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="52"/>
+        </scene>
+    </scenes>
+</document>

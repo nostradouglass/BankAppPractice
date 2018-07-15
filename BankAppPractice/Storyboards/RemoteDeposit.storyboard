@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FFD-ka-sWz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Remote Deposit-->
+        <scene sceneID="2Gk-Zd-pIt">
+            <objects>
+                <viewController id="FFD-ka-sWz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nVe-rI-mfS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfs-3f-MzT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5dL-DR-Saz"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Remote Deposit" id="6AG-si-5pz">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Xos-WB-VcI">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kfs-3f-MzT" firstAttribute="leading" secondItem="QPD-J0-8Wp" secondAttribute="leading" id="8W2-1H-ceg"/>
+                            <constraint firstItem="Kfs-3f-MzT" firstAttribute="trailing" secondItem="QPD-J0-8Wp" secondAttribute="trailing" id="dDv-y7-aeT"/>
+                            <constraint firstItem="Kfs-3f-MzT" firstAttribute="top" secondItem="QPD-J0-8Wp" secondAttribute="top" id="w4h-Bj-Sfr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QPD-J0-8Wp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Remote Deposit" id="22g-9N-Rxw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXO-De-wTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="5"/>
+        </scene>
+    </scenes>
+</document>

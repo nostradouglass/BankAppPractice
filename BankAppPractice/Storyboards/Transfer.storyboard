@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exn-kj-6zn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tarnsfer-->
+        <scene sceneID="iLQ-xt-Kx0">
+            <objects>
+                <viewController id="exn-kj-6zn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZEk-WQ-tWR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-jK-N7F">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="doJ-yj-rCG"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.74901960779999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Transfer" id="Ewu-p6-iKu">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Z7O-kz-NJc">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iBc-jK-N7F" firstAttribute="trailing" secondItem="sO7-fm-cLP" secondAttribute="trailing" id="7lW-tJ-88Q"/>
+                            <constraint firstItem="iBc-jK-N7F" firstAttribute="leading" secondItem="sO7-fm-cLP" secondAttribute="leading" id="fkI-oF-P3j"/>
+                            <constraint firstItem="iBc-jK-N7F" firstAttribute="top" secondItem="sO7-fm-cLP" secondAttribute="top" id="nVo-fX-mEx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sO7-fm-cLP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tarnsfer" id="odA-Mw-Wrg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0io-Uu-EIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3675" y="991"/>
+        </scene>
+    </scenes>
+</document>
