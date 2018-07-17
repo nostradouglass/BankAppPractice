@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-
+import SVProgressHUD
 class EnrollViewController: UIViewController {
 
 	@IBOutlet weak var emailLabel: UITextField!
@@ -26,6 +26,8 @@ class EnrollViewController: UIViewController {
 
 	@IBAction func enrollClicked(_ sender: UIButton) {
 		
+		SVProgressHUD.show()
+		
 		var confirmedPass = ""
 		
 		if passwordLabel.text! == passwordVerifyLabel.text! {
@@ -38,8 +40,10 @@ class EnrollViewController: UIViewController {
 			
 			if error != nil {
 				print(error!)
+				SVProgressHUD.dismiss()
 			} else {
 				print("user created")
+				SVProgressHUD.dismiss()
 				self.performSegue(withIdentifier: "returnToLoginSegue", sender: self)
 			}
 		}

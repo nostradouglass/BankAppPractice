@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
@@ -50,6 +51,7 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 		DispatchQueue.main.async {
 			self.tableView.reloadData()
 		}
+		SVProgressHUD.dismiss()
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -73,6 +75,8 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 	}
 	
 	func getDataFromAPI() {
+		
+		SVProgressHUD.show()
 		
 		Alamofire.request("http://localhost:3000/accounts").responseJSON { response in
 			
