@@ -17,10 +17,6 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var tableHeight: NSLayoutConstraint!
 	
-
-	
-	
-	
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
@@ -125,5 +121,11 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 		}
 	}
 	
+	
+	
+	@IBAction func logoutPressed(_ sender: Any) {
+		
+		performSegue(withIdentifier: "logoutToMain", sender: self)
+	}
 	
 }

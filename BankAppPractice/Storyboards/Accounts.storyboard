@@ -31,6 +31,9 @@
                                     <navigationItem title="Accounts" id="WNP-cv-jhG">
                                         <barButtonItem key="rightBarButtonItem" title="Logout" id="NRG-JQ-TBG">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="logoutPressed:" destination="w0i-X4-Kxf" id="9eR-4o-tKE"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -139,9 +142,11 @@
                     <connections>
                         <outlet property="tableHeight" destination="dQO-JA-u0v" id="2K9-ik-ctD"/>
                         <outlet property="tableView" destination="dcW-Ve-xRs" id="Ooj-hp-j2n"/>
+                        <segue destination="eIK-4a-QAe" kind="unwind" identifier="logoutToMain" unwindAction="unwindToMainWithSegue:" id="PYf-Vc-r8R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUt-7u-hiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eIK-4a-QAe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4162" y="786"/>
         </scene>

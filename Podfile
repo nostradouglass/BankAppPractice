@@ -7,5 +7,8 @@ target 'BankAppPractice' do
   # Pods for BankAppPractice
 	pod 'Alamofire', '~> 4.7'
 	pod 'SwiftyJSON', '~> 4.0'
-	pod 'SVProgressHUD'
+  pod 'SVProgressHUD'
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end

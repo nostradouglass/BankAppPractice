@@ -21,6 +21,11 @@
 		AC4F6B7420FA830100FC1C8F /* PayBills.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B7320FA830100FC1C8F /* PayBills.storyboard */; };
 		AC657FCA20FBF7B500921A53 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC657FC920FBF7B500921A53 /* DetailTableViewCell.swift */; };
 		AC6C3E3220F51CB9000DBAFB /* AccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */; };
+		ACA1F6C620FE553D00B8B550 /* RemoteDepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1F6C520FE553D00B8B550 /* RemoteDepositViewController.swift */; };
+		ACA1F6CA20FE559600B8B550 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1F6C920FE559600B8B550 /* TransferViewController.swift */; };
+		ACA1F6CD20FE55B700B8B550 /* PayBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1F6CC20FE55B700B8B550 /* PayBillsViewController.swift */; };
+		ACAE631D20FD4B0300792ECF /* EnrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE631C20FD4B0300792ECF /* EnrollViewController.swift */; };
+		ACAE631F20FD4EA700792ECF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACAE631E20FD4EA700792ECF /* GoogleService-Info.plist */; };
 		ACCA7B2820FA86CC005F50F2 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA7B2720FA86CC005F50F2 /* AccountDetailsViewController.swift */; };
 		B8326FE85D54A09FDA4AADEF /* Pods_BankAppPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D697C2FA0B0D4899C02B748 /* Pods_BankAppPractice.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +50,11 @@
 		AC4F6B7320FA830100FC1C8F /* PayBills.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayBills.storyboard; sourceTree = "<group>"; };
 		AC657FC920FBF7B500921A53 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTableViewCell.swift; sourceTree = "<group>"; };
+		ACA1F6C520FE553D00B8B550 /* RemoteDepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDepositViewController.swift; sourceTree = "<group>"; };
+		ACA1F6C920FE559600B8B550 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		ACA1F6CC20FE55B700B8B550 /* PayBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBillsViewController.swift; sourceTree = "<group>"; };
+		ACAE631C20FD4B0300792ECF /* EnrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollViewController.swift; sourceTree = "<group>"; };
+		ACAE631E20FD4EA700792ECF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACCA7B2720FA86CC005F50F2 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,14 +110,19 @@
 			children = (
 				AC4F6B7520FA839700FC1C8F /* Storyboards */,
 				AC101E3F20F3F34300B1580A /* AppDelegate.swift */,
+				ACA1F6CF20FE55FF00B8B550 /* Login */,
+				ACA1F6CE20FE55CA00B8B550 /* Main */,
+				ACA1F6D020FE561300B8B550 /* Enroll */,
 				AC657FC820FBF78C00921A53 /* Accounts */,
 				AC657FC720FBF77B00921A53 /* AccountDetails */,
+				ACA1F6C420FE551600B8B550 /* Remote Deposit */,
+				ACA1F6C820FE557C00B8B550 /* Transfer */,
+				ACA1F6CB20FE55AB00B8B550 /* Pay Bills */,
+				AC101E5120F4578100B1580A /* TabViewController.swift */,
 				AC101E4820F3F34400B1580A /* LaunchScreen.storyboard */,
 				AC101E4620F3F34400B1580A /* Assets.xcassets */,
 				AC101E4B20F3F34400B1580A /* Info.plist */,
-				AC101E4120F3F34300B1580A /* LoginViewController.swift */,
-				AC101E5320F4586C00B1580A /* MainViewController.swift */,
-				AC101E5120F4578100B1580A /* TabViewController.swift */,
+				ACAE631E20FD4EA700792ECF /* GoogleService-Info.plist */,
 			);
 			path = BankAppPractice;
 			sourceTree = "<group>";
@@ -140,6 +155,54 @@
 				AC6C3E3120F51CB9000DBAFB /* AccountsTableViewCell.swift */,
 			);
 			path = Accounts;
+			sourceTree = "<group>";
+		};
+		ACA1F6C420FE551600B8B550 /* Remote Deposit */ = {
+			isa = PBXGroup;
+			children = (
+				ACA1F6C520FE553D00B8B550 /* RemoteDepositViewController.swift */,
+			);
+			path = "Remote Deposit";
+			sourceTree = "<group>";
+		};
+		ACA1F6C820FE557C00B8B550 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				ACA1F6C920FE559600B8B550 /* TransferViewController.swift */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
+		ACA1F6CB20FE55AB00B8B550 /* Pay Bills */ = {
+			isa = PBXGroup;
+			children = (
+				ACA1F6CC20FE55B700B8B550 /* PayBillsViewController.swift */,
+			);
+			path = "Pay Bills";
+			sourceTree = "<group>";
+		};
+		ACA1F6CE20FE55CA00B8B550 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC101E5320F4586C00B1580A /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ACA1F6CF20FE55FF00B8B550 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AC101E4120F3F34300B1580A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ACA1F6D020FE561300B8B550 /* Enroll */ = {
+			isa = PBXGroup;
+			children = (
+				ACAE631C20FD4B0300792ECF /* EnrollViewController.swift */,
+			);
+			path = Enroll;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC101E4A20F3F34400B1580A /* LaunchScreen.storyboard in Resources */,
+				ACAE631F20FD4EA700792ECF /* GoogleService-Info.plist in Resources */,
 				AC4F6B7220FA82DF00FC1C8F /* Transfer.storyboard in Resources */,
 				AC101E4720F3F34400B1580A /* Assets.xcassets in Resources */,
 				AC4F6B6E20FA825C00FC1C8F /* Accounts.storyboard in Resources */,
@@ -242,14 +306,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BankAppPractice/Pods-BankAppPractice-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,8 +337,12 @@
 			files = (
 				AC101E5220F4578100B1580A /* TabViewController.swift in Sources */,
 				ACCA7B2820FA86CC005F50F2 /* AccountDetailsViewController.swift in Sources */,
+				ACAE631D20FD4B0300792ECF /* EnrollViewController.swift in Sources */,
+				ACA1F6CA20FE559600B8B550 /* TransferViewController.swift in Sources */,
 				AC657FCA20FBF7B500921A53 /* DetailTableViewCell.swift in Sources */,
 				AC101E4220F3F34300B1580A /* LoginViewController.swift in Sources */,
+				ACA1F6CD20FE55B700B8B550 /* PayBillsViewController.swift in Sources */,
+				ACA1F6C620FE553D00B8B550 /* RemoteDepositViewController.swift in Sources */,
 				AC101E5620F461EB00B1580A /* AccountsViewController.swift in Sources */,
 				AC101E4020F3F34300B1580A /* AppDelegate.swift in Sources */,
 				AC101E5420F4586C00B1580A /* MainViewController.swift in Sources */,

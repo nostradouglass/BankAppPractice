@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exn-kj-6zn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exn-kj-6zn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Tarnsfer-->
         <scene sceneID="iLQ-xt-Kx0">
             <objects>
-                <viewController id="exn-kj-6zn" sceneMemberID="viewController">
+                <viewController id="exn-kj-6zn" customClass="TransferViewController" customModule="BankAppPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZEk-WQ-tWR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                                     <navigationItem title="Transfer" id="Ewu-p6-iKu">
                                         <barButtonItem key="rightBarButtonItem" title="Logout" id="Z7O-kz-NJc">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="logoutPressed:" destination="exn-kj-6zn" id="aj4-fU-luj"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -46,10 +49,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tarnsfer" id="odA-Mw-Wrg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="d3d-ET-QUu" kind="unwind" identifier="logoutToMain" unwindAction="unwindToMainWithSegue:" id="iaV-kE-8oF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0io-Uu-EIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="d3d-ET-QUu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3675" y="991"/>
+            <point key="canvasLocation" x="3591" y="1014"/>
         </scene>
     </scenes>
 </document>
