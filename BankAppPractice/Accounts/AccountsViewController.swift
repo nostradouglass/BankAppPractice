@@ -7,18 +7,11 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 import SVProgressHUD
-import FirebaseAuth
-import FirebaseDatabase
 
 class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var data : [[String:Any]] = []
-	var checkingData : [String: Any] = ["type":"Checking", "actual": "", "avail": "", "transactions" : ""]
-	var savingsData : [String: Any] = ["type":"Savings", "actual": "", "avail": "", "transactions" : ""]
-	
+	let userAccount = UserAccount()
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var tableHeight: NSLayoutConstraint!
@@ -39,66 +32,28 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		getCurrentUserData()
+		userAccount.getCurrentUserData(updateTableUIcallback : refreshTheTableUI)
 		
 	}
 	
-	func getCurrentUserData()  {
+	func refreshTheTableUI() {
+		self.viewDidLayoutSubviews()
 		
-		
-		let user = Auth.auth().currentUser
-		let messageDB = Database.database().reference().child((user?.uid)!)
-		
-		
-		messageDB.observeSingleEvent(of: .value) { (snapshot) in
-			
-			var snap = snapshot.value as! [String: Any]
-			
-			// Cheking account work
-			var checking = snap["checking"]! as! [String : Any]
-			let checkingActual = checking["actual"]!
-			let checkingAvail = checking["avail"]!
-			let checkingTransactions = checking["transactions"]
-			self.checkingData["actual"] = "\(checkingActual)"
-			self.checkingData["avail"] = "\(checkingAvail)"
-			self.checkingData["transactions"] = checkingTransactions
-			self.data.append(self.checkingData)
-			
-			
-			// savings Account work
-			var savings = snap["savings"]! as! [String : Any]
-			let savingsActual = savings["actual"]!
-			let savingsAvail = savings["avail"]!
-			let savingsTransactions = savings["transactions"]
-			self.savingsData["actual"] = "\(savingsActual)"
-			self.savingsData["avail"] = "\(savingsAvail)"
-			self.savingsData["transactions"] = savingsTransactions
-			self.data.append(self.savingsData)
-			
-			
-			
-			self.viewDidLayoutSubviews()
-			
-			DispatchQueue.main.async {
-				self.tableView.reloadData()
-			}
-			
-			var frame = self.tableView.frame;
-			frame.size.height = CGFloat(self.data.count * 85);
-			self.tableView.frame = frame;
-			
-			self.tableHeight.constant = CGFloat(self.data.count * 85)
+		DispatchQueue.main.async {
+			self.tableView.reloadData()
 		}
 		
-		SVProgressHUD.dismiss()
+		var frame = self.tableView.frame;
+		frame.size.height = CGFloat(userAccount.data.count * 85);
+		self.tableView.frame = frame;
 		
+		self.tableHeight.constant = CGFloat(userAccount.data.count * 85)
+		SVProgressHUD.dismiss()
 	}
-	
-	
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.data.count
+		return userAccount.data.count
 	}
 	
 	
@@ -106,9 +61,9 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? AccountsTableViewCell
 		
-		cell?.accountType.text = data[indexPath.row]["type"] as? String
-		cell?.availBalance.text = "$\(data[indexPath.row]["avail"]! as! String)"
-		cell?.actualBalance.text = "$\(data[indexPath.row]["actual"]! as! String)"
+		cell?.accountType.text = self.userAccount.data[indexPath.row]["type"] as? String
+		cell?.availBalance.text = "$\(self.userAccount.data[indexPath.row]["avail"]! as! String)"
+		cell?.actualBalance.text = "$\(self.userAccount.data[indexPath.row]["actual"]! as! String)"
 		
 		return cell!
 	}
@@ -121,8 +76,8 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 			let indexPath = self.tableView.indexPathForSelectedRow
 			
 			
-			let accountType = self.data[(indexPath?.row)!]["type"]! as! String
-			let transactions = self.data[(indexPath?.row)!]["transactions"]!
+			let accountType = self.userAccount.data[(indexPath?.row)!]["type"]! as! String
+			let transactions = self.userAccount.data[(indexPath?.row)!]["transactions"]!
 			
 			
 			dest.passedAccountType = accountType

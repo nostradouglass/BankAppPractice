@@ -137,7 +137,6 @@
 				AC4F6B6F20FA82AC00FC1C8F /* RemoteDeposit.storyboard */,
 				AC4F6B7120FA82DF00FC1C8F /* Transfer.storyboard */,
 				AC4F6B7320FA830100FC1C8F /* PayBills.storyboard */,
-				AC4CB17D210545F40081E65A /* UserAccount.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -145,6 +144,7 @@
 		AC657FC720FBF77B00921A53 /* AccountDetails */ = {
 			isa = PBXGroup;
 			children = (
+				AC4CB17D210545F40081E65A /* UserAccount.swift */,
 				ACCA7B2720FA86CC005F50F2 /* AccountDetailsViewController.swift */,
 				AC657FC920FBF7B500921A53 /* DetailTableViewCell.swift */,
 			);
