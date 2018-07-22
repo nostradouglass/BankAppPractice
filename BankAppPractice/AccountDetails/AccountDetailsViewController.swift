@@ -16,6 +16,7 @@ class AccountDetailsViewController: UIViewController, UITableViewDelegate, UITab
 	var passedAccountType : String?
 	var passedTransactions : Any?
 	
+	var transactionsList : [[String:Any]] = [["amount" : "", "date" : "", "name" : ""]]
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var accountTitle: UILabel!
@@ -34,11 +35,22 @@ class AccountDetailsViewController: UIViewController, UITableViewDelegate, UITab
 		
 		if let passedAccountType = passedAccountType {
 			accountTitle.text = passedAccountType
+		
 		}
 		
-		if let passedTransactions = passedTransactions {
-			print(passedTransactions)
+		var temp = passedTransactions as! [[String:Any]]
+		
+		func updateTransList() {
+			self.transactionsList.removeAll()
+			for item in temp {
+				transactionsList.append(item)
+			}
 		}
+		
+		updateTransList()
+
+		
+
 		
 		
 		navigationController?.navigationBar.barTintColor = Red
@@ -51,7 +63,7 @@ class AccountDetailsViewController: UIViewController, UITableViewDelegate, UITab
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return self.transactionsList.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,9 +71,10 @@ class AccountDetailsViewController: UIViewController, UITableViewDelegate, UITab
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell
 		
-		cell?.nameLabel.text = "Name"
-		cell?.dateLabel.text = "Date"
-		cell?.amountLabel.text = "amount"
+		cell?.nameLabel.text = transactionsList[indexPath.row]["name"] as? String
+		cell?.dateLabel.text = "\(transactionsList[indexPath.row]["date"]!)"
+		cell?.amountLabel.text = "$\(transactionsList[indexPath.row]["amount"]!)"
+		
 		
 		return cell!
 	}

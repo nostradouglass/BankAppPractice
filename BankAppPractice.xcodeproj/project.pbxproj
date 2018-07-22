@@ -15,6 +15,7 @@
 		AC101E5220F4578100B1580A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5120F4578100B1580A /* TabViewController.swift */; };
 		AC101E5420F4586C00B1580A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5320F4586C00B1580A /* MainViewController.swift */; };
 		AC101E5620F461EB00B1580A /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC101E5520F461EB00B1580A /* AccountsViewController.swift */; };
+		AC4CB17E210545F40081E65A /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CB17D210545F40081E65A /* UserAccount.swift */; };
 		AC4F6B6E20FA825C00FC1C8F /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B6D20FA825C00FC1C8F /* Accounts.storyboard */; };
 		AC4F6B7020FA82AC00FC1C8F /* RemoteDeposit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B6F20FA82AC00FC1C8F /* RemoteDeposit.storyboard */; };
 		AC4F6B7220FA82DF00FC1C8F /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F6B7120FA82DF00FC1C8F /* Transfer.storyboard */; };
@@ -44,6 +45,7 @@
 		AC101E5120F4578100B1580A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		AC101E5320F4586C00B1580A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC101E5520F461EB00B1580A /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		AC4CB17D210545F40081E65A /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		AC4F6B6D20FA825C00FC1C8F /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
 		AC4F6B6F20FA82AC00FC1C8F /* RemoteDeposit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemoteDeposit.storyboard; sourceTree = "<group>"; };
 		AC4F6B7120FA82DF00FC1C8F /* Transfer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
@@ -108,8 +110,8 @@
 		AC101E3E20F3F34300B1580A /* BankAppPractice */ = {
 			isa = PBXGroup;
 			children = (
-				AC4F6B7520FA839700FC1C8F /* Storyboards */,
 				AC101E3F20F3F34300B1580A /* AppDelegate.swift */,
+				AC4F6B7520FA839700FC1C8F /* Storyboards */,
 				ACA1F6CF20FE55FF00B8B550 /* Login */,
 				ACA1F6CE20FE55CA00B8B550 /* Main */,
 				ACA1F6D020FE561300B8B550 /* Enroll */,
@@ -135,6 +137,7 @@
 				AC4F6B6F20FA82AC00FC1C8F /* RemoteDeposit.storyboard */,
 				AC4F6B7120FA82DF00FC1C8F /* Transfer.storyboard */,
 				AC4F6B7320FA830100FC1C8F /* PayBills.storyboard */,
+				AC4CB17D210545F40081E65A /* UserAccount.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				AC101E4220F3F34300B1580A /* LoginViewController.swift in Sources */,
 				ACA1F6CD20FE55B700B8B550 /* PayBillsViewController.swift in Sources */,
 				ACA1F6C620FE553D00B8B550 /* RemoteDepositViewController.swift in Sources */,
+				AC4CB17E210545F40081E65A /* UserAccount.swift in Sources */,
 				AC101E5620F461EB00B1580A /* AccountsViewController.swift in Sources */,
 				AC101E4020F3F34300B1580A /* AppDelegate.swift in Sources */,
 				AC101E5420F4586C00B1580A /* MainViewController.swift in Sources */,

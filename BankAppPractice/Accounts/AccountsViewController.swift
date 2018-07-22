@@ -10,10 +10,15 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SVProgressHUD
+import FirebaseAuth
+import FirebaseDatabase
 
 class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	var data : [[String:Any]] = []
+	var checkingData : [String: Any] = ["type":"Checking", "actual": "", "avail": "", "transactions" : ""]
+	var savingsData : [String: Any] = ["type":"Savings", "actual": "", "avail": "", "transactions" : ""]
+	
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var tableHeight: NSLayoutConstraint!
@@ -23,36 +28,8 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 		super.viewWillAppear(animated)
 		self.navigationController?.isNavigationBarHidden = true
 		
-		
 	}
 	
-	func updateAccountData(jsonAccounts: JSON) {
-		
-		var temp = [[String: Any]]()
-		
-		for i in 0...jsonAccounts.count - 1 {
-			let type = jsonAccounts[i]["type"].stringValue
-			let avail = jsonAccounts[i]["avail"].stringValue
-			let actual = jsonAccounts[i]["actual"].stringValue
-			let transactions = jsonAccounts[i]["transactions"]
-			
-			temp.append(["type" : type, "avail" : avail, "actual" : actual, "transactions" : transactions])
-			
-		}
-		
-		data = temp
-		
-		var frame = self.tableView.frame;
-		frame.size.height = CGFloat(self.data.count * 85);
-		self.tableView.frame = frame;
-		
-		tableHeight.constant = CGFloat(self.data.count * 85)
-		
-		DispatchQueue.main.async {
-			self.tableView.reloadData()
-		}
-		SVProgressHUD.dismiss()
-	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
@@ -62,31 +39,61 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		getDataFromAPI()
-		
-		viewDidLayoutSubviews()
-		
-		var frame = self.tableView.frame;
-		frame.size.height = CGFloat(self.data.count * 85);
-		self.tableView.frame = frame;
-		
-		tableHeight.constant = CGFloat(self.data.count * 85)
+		getCurrentUserData()
 		
 	}
 	
-	func getDataFromAPI() {
+	func getCurrentUserData()  {
 		
-		SVProgressHUD.show()
 		
-		Alamofire.request("http://localhost:3000/accounts").responseJSON { response in
+		let user = Auth.auth().currentUser
+		let messageDB = Database.database().reference().child((user?.uid)!)
+		
+		
+		messageDB.observeSingleEvent(of: .value) { (snapshot) in
 			
-			let accountData : JSON = JSON(response.result.value!)
+			var snap = snapshot.value as! [String: Any]
 			
-			self.updateAccountData(jsonAccounts: accountData)
+			// Cheking account work
+			var checking = snap["checking"]! as! [String : Any]
+			let checkingActual = checking["actual"]!
+			let checkingAvail = checking["avail"]!
+			let checkingTransactions = checking["transactions"]
+			self.checkingData["actual"] = "\(checkingActual)"
+			self.checkingData["avail"] = "\(checkingAvail)"
+			self.checkingData["transactions"] = checkingTransactions
+			self.data.append(self.checkingData)
 			
+			
+			// savings Account work
+			var savings = snap["savings"]! as! [String : Any]
+			let savingsActual = savings["actual"]!
+			let savingsAvail = savings["avail"]!
+			let savingsTransactions = savings["transactions"]
+			self.savingsData["actual"] = "\(savingsActual)"
+			self.savingsData["avail"] = "\(savingsAvail)"
+			self.savingsData["transactions"] = savingsTransactions
+			self.data.append(self.savingsData)
+			
+			
+			
+			self.viewDidLayoutSubviews()
+			
+			DispatchQueue.main.async {
+				self.tableView.reloadData()
+			}
+			
+			var frame = self.tableView.frame;
+			frame.size.height = CGFloat(self.data.count * 85);
+			self.tableView.frame = frame;
+			
+			self.tableHeight.constant = CGFloat(self.data.count * 85)
 		}
 		
+		SVProgressHUD.dismiss()
+		
 	}
+	
 	
 	
 	
@@ -100,8 +107,8 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? AccountsTableViewCell
 		
 		cell?.accountType.text = data[indexPath.row]["type"] as? String
-		cell?.availBalance.text = data[indexPath.row]["avail"]! as? String
-		cell?.actualBalance.text = data[indexPath.row]["actual"]! as? String
+		cell?.availBalance.text = "$\(data[indexPath.row]["avail"]! as! String)"
+		cell?.actualBalance.text = "$\(data[indexPath.row]["actual"]! as! String)"
 		
 		return cell!
 	}
@@ -112,14 +119,14 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
 			let dest : AccountDetailsViewController = segue.destination as! AccountDetailsViewController
 			
 			let indexPath = self.tableView.indexPathForSelectedRow
-		
+			
 			
 			let accountType = self.data[(indexPath?.row)!]["type"]! as! String
 			let transactions = self.data[(indexPath?.row)!]["transactions"]!
 			
 			
-		dest.passedAccountType = accountType
-		dest.passedTransactions = transactions
+			dest.passedAccountType = accountType
+			dest.passedTransactions = transactions
 			
 			self.tableView.deselectRow(at: indexPath!, animated: true)
 		}
